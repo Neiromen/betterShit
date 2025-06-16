@@ -3,6 +3,7 @@ package com.zaurtregulov.spring.mvc;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -14,25 +15,12 @@ public class MyController {
         return "firstView";
     }
     @RequestMapping("/askDetails")
-    public String askEmployeeDetails(){
+    public String askEmployeeDetails(Model model) {
+        model.addAttribute("employee",new Employee());
         return "ask-employee-details-view";
     }
-    //    @RequestMapping("/showDetails")
-//    public String showEmployeeDetails(){
-//        return "show-employee-details-view";
-//    }
-//    @RequestMapping("/showDetails")
-//    public String showEmployeeDetails(HttpServletRequest request, Model model){
-//        String empName = request.getParameter("employeeName");
-//        empName = "Mr. "+empName;
-//        model.addAttribute("nameAttribute",empName);
-//        return "show-employee-details-view";
-//    }
-
     @RequestMapping("/showDetails")
-    public String showEmployeeDetails(@RequestParam("employeeName") String empName, Model model){
-        empName = "Mr. "+empName;
-        model.addAttribute("nameAttribute",empName);
+    public String showEmployeeDetails(@ModelAttribute("employee") Employee employee) {
         return "show-employee-details-view";
     }
 }

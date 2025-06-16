@@ -2,6 +2,11 @@
 <html>
 <body>
 <h2>Dear Employee, you are WELCOME!</h2>
-<p>${nameAttribute}</p>
+<p>Your name ${employee.name}</p>
+<br><br>
+<p>Your surname ${employee.surname}</p>
+<br><br>
+<p>Your salary ${employee.salary}</p>
+<br><br>
 </body>
 </html>
