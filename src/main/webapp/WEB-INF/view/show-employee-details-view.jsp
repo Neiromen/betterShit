@@ -13,5 +13,7 @@
 <p>Your car ${employee.carBrand}</p>
 <br><br>
 <p>Your phone number ${employee.phoneNumber}</p>
+<br><br>
+<p>Your email ${employee.email}</p>
 </body>
 </html>
