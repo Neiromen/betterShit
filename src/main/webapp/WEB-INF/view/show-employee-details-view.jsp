@@ -8,5 +8,7 @@
 <br><br>
 <p>Your salary ${employee.salary}</p>
 <br><br>
+<p>Your department ${employee.department}</p>
+<br><br>
 </body>
 </html>
