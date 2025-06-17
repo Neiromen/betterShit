@@ -11,5 +11,7 @@
 <p>Your department ${employee.department}</p>
 <br><br>
 <p>Your car ${employee.carBrand}</p>
+<br><br>
+<p>Your phone number ${employee.phoneNumber}</p>
 </body>
 </html>
