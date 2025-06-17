@@ -10,5 +10,6 @@
 <br><br>
 <p>Your department ${employee.department}</p>
 <br><br>
+<p>Your car ${employee.carBrand}</p>
 </body>
 </html>
